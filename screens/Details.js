@@ -78,7 +78,7 @@ const Details = ({ route, navigation }) => {
           <React.Fragment>
             <DetailsHeader data={data} navigation={navigation} />
             <SubInfo />
-            <View style={{ paddingBottom: SIZES.font }}>
+            <View style={{ padding: SIZES.font }}>
               <DetailsDesc data={data} />
 
               {data.bids.length > 0 && (
