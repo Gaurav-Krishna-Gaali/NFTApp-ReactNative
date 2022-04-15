@@ -1,4 +1,5 @@
 import { View, Text, Image, TextInput } from "react-native";
+import React from "react";
 
 import { COLORS, FONTS, SIZES, assets } from "../constants";
 
@@ -54,7 +55,7 @@ const HomeHeader = ({ onSearch }) => (
           marginTop: SIZES.base / 2,
         }}
       >
-        Let's Find your a masterpiece
+        Let's find you a masterpiece
       </Text>
     </View>
 
@@ -63,22 +64,22 @@ const HomeHeader = ({ onSearch }) => (
         style={{
           width: "100%",
           borderRadius: SIZES.font,
-          flexDirection: "row",
           backgroundColor: COLORS.gray,
+          flexDirection: "row",
           alignItems: "center",
-          padding: SIZES.font,
-          paddvertical: SIZES.small - 2,
+          paddingHorizontal: SIZES.font,
+          paddingVertical: SIZES.small - 2,
         }}
       >
         <Image
           source={assets.search}
-          // resizeMode="contain"
+          resizeMode="contain"
           style={{ width: 20, height: 20, marginRight: SIZES.base }}
         />
         <TextInput
           placeholder="Search NFTS"
           style={{ flex: 1 }}
-          onChange={onSearch}
+          onChangeText={onSearch}
         />
       </View>
     </View>
